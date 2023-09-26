@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>CF-blog后台</title>
+	<title>Nhật Trung's blog</title>
     <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/favicon.ico" />
 	<link rel="shortcut icon" type="image/x-icon"  href="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/favicon.ico"/>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -30,19 +30,19 @@
 	<div>
 		<ul id="myTab" class="nav nav-tabs">
 			<li>
-				<a href="/" >CF-blog</a>
+				<a href="/" >Nhật Trung's blog</a>
 			</li>
 			<li>
-				<a href="#list" data-toggle="tab">我的文章</a>
+				<a href="#list" data-toggle="tab">Bài viết của tôi</a>
 			</li>
 			<li  class="active">
-				<a href="#new" data-toggle="tab">新建</a>
+				<a href="#new" data-toggle="tab">Mới</a>
 			</li>
 			<li>
-				<a href="#config" data-toggle="tab">设置</a>
+				<a href="#config" data-toggle="tab">Cài đặt</a>
 			</li>
 			<li>
-				<a href="#pub" data-toggle="tab">发布</a>
+				<a href="#pub" data-toggle="tab">Lưu</a>
 			</li>
 		</ul>
 	</div>
@@ -52,47 +52,47 @@
 	<div class="tab-pane fade" id="list">
 		<div class="container" >
 			<table class="table  table-striped" id="articleList">
-				  <tr><td>ID</td><td>标题</td><td>创建日期</td></tr>
+				  <tr><td>ID</td><td>Tiêu đề</td><td>Ngày thành lập</td></tr>
 			</table>
 			<input type="hidden"  name="page" id="page" value='1'>
-			<a id="loadmore" class="btn btn-default">加载更多...</a>
+			<a id="loadmore" class="btn btn-default">Tải thêm...</a>
 		</div> 
 	</div>
 	<div class="tab-pane fade in active" id="new">
 		<div class="container">
-			<h3 id="labelNew">新增</h3>   
+			<h3 id="labelNew">Mới</h3>   
 			<form id="addNewForm"  class="form-inline" >
 				<div class="form-group" style="width: 98%">
 					<input type="hidden" class="form-control" name="id" id="id" >
 					<input type="text" class="form-control" name="title" id="title" placeholder="标题" style="width: 100%;" required="true">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail2">特色图片</label>
+					<label for="exampleInputEmail2">Hình ảnh nổi bật</label>
 					<input type="url" class="form-control" style="width: 400px;"  name="img" id="img" placeholder="" >
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail2">永久链接</label>
+					<label for="exampleInputEmail2">Liên kết cố định</label>
 					<input type="text" class="form-control" name="link" id="link" placeholder="" required="true">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail2">创建日期</label>
+					<label for="exampleInputEmail2">Ngày xuất bản</label>
 					<input type="datetime-local" class="form-control" id="createDate" name="createDate" placeholder=""  required="true">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail2">分类</label>
+					<label for="exampleInputEmail2">Phân loại</label>
 					<select class="selectpicker" multiple name="category[]" id="category">
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail2">标签</label>
+					<label for="exampleInputEmail2">Nhãn</label>
 					<input type="text" class="form-control" name="tags" id="tags" placeholder="标签1,标签2">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail2">权重</label>
+					<label for="exampleInputEmail2">Sự ưu tiên</label>
 					<input type="text" class="form-control" name="priority" id="priority" value='0.5' placeholder="权重">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail2">更新频率</label>
+					<label for="exampleInputEmail2">Tần suất cập nhật</label>
 					    <select class="form-control" id="changefreq" name="changefreq">
 						<option value="daily" selected  = "selected" >daily</option>
 						<option value="hourly" >hourly</option>
@@ -115,19 +115,19 @@
 		<div class="container" >
 			<form id="configForm" role="form" >
 				<div class="form-group">
-				    <label for="name">分类, 例:<code>["类别A","类别B","类别C","类别D"]</code></label>
+				    <label for="name">Phân loại, ví dụ:<code>["Loại A","Loại B","Loại C","Loại D"]</code></label>
 					<textarea class="form-control" id="WidgetCategory" name="WidgetCategory" rows="3" placeholder='["分类A","分类B"]'></textarea>
 				</div>
 	
 				<div class="form-group">
-				    <label for="name">菜单, 例:<code>[{"title":"技术文章","url":"/category/技术文章"},{"title":"管理","url":"/admin"}]</code></label>
+				    <label for="name">Menu, ví dụ:<code>[{"title":"Bài viết kỹ thuật","url":"/category/技术文章"},{"title":"Quản lý","url":"/admin"}]</code></label>
 					<textarea class="form-control" id="WidgetMenu" name="WidgetMenu" rows="5"  placeholder='[
-	{"title":"菜单A"	,"url":"/category/菜单A"},
-	{"title":"菜单B"	,"url":"/category/菜单B"}
+	{"title":"Loại A"	,"url":"/category/typeA"},
+	{"title":"Loại B"	,"url":"/category/typeB"}
 ]'></textarea>
 				</div>
 				<div class="form-group">
-				    <label for="name">其他链接, 例:<code>[{"title":"我的好友","url":"https://blog.gezhong.vip/"},{"title":"谷歌","url":"https://www.google.com/"}]</code></label>
+				    <label for="name">Các liên kết khác, 例:<code>[{"title":"Bạn tốt của tôi","url":"https://blog.ntme/workers.com/"},{"title":"Google","url":"https://www.google.com/"}]</code></label>
 					<textarea class="form-control" id="WidgetLink" name="WidgetLink" rows="5"  placeholder='[
 	{"title":"好友"	,"url":"https://blog.gezhong.vip/"},
 	{"title":"谷歌"	,"url":"https://www.google.com/"}
@@ -139,8 +139,8 @@
 
 			<form id="importForm" role="form" >
 				<div class="form-group">
-				    <label for="name">导出/导入</label>
-					<textarea class="form-control" id="importJson" name="importJson" rows="3" placeholder='复制完整的导出json'></textarea>
+				    <label for="name">Sao lưu và khôi phục</label>
+					<textarea class="form-control" id="importJson" name="importJson" rows="3" placeholder='Sao chép json xuất hoàn chỉnh'></textarea>
 				</div>
 
 				<a  tabindex="0"  role="button"  type="submit" id="btn_import" class="btn btn-default" onclick="importBlog()">导入</a>
@@ -155,11 +155,11 @@
 		<div class="container" >
 			<div class="jumbotron" >
 				<p class="lead">
-				由于前端使用缓存,以下操作需要发布:新建文章、发布文章、修改后台配置、修改workers配置</br>
-				前端生效需要ctrl+F5 强制刷新
+					Vì giao diện người dùng sử dụng bộ nhớ đệm nên các thao tác sau cần được xuất bản: tạo bài viết mới, xuất bản bài viết, sửa đổi cấu hình nền, sửa đổi cấu hình công nhân</br>
+				Để giao diện người dùng có hiệu lực, cần phải có ctrl+F5 để buộc làm mới.
 				</p>
 				
-				<a href="#" class="btn btn-default" onclick="publish()">发布</a>
+				<a href="#" class="btn btn-default" onclick="publish()">Xuất bản</a>
 			</div>
 		</div>
 	</div>	
@@ -169,9 +169,9 @@
 <script type="text/javascript">
 	$(function() {
 		$('#myTab li:eq(0) 1').tab('show');
-		//获取分类
+		//Nhận danh mục
 		var categoryJson = <!--{categoryJson}-->;
-		//获取菜单
+		//Nhận thực đơn
 		var menuJson = <!--{menuJson}-->;
 		var linkJson = <!--{linkJson}-->;
 		var mdEditor = editormd("content", {
@@ -185,7 +185,7 @@
 				tocm : true, 
 				codeFold : true
 			});
-		//表单赋值
+		//Bài mẫu
 		$('#createDate').val(new Date());
 		
 		$('#WidgetCategory').val(JSON.stringify(categoryJson));
@@ -196,9 +196,9 @@
 		for (var i = 0; i < categoryJson.length; i++) {
 			category.append('<option id=' + categoryJson[i] + ' value=' + categoryJson[i] + '>' + categoryJson[i] + '</option>');
 		}
-		$("#loadmore").click();//初始加载一页
+		$("#loadmore").click();//Tải trang ban đầu
 	});
-    //加载文章列表	
+    //Tải danh sách bài viết
     $("#loadmore").click(function(){
         var page=$("#page").val();
         $.ajax({
@@ -221,7 +221,7 @@
             }
         });
     })
-    //新建文章
+    //Tạo bài viết mới
     function saveAddNew(){
         if(
             $('#WidgetMenu').val() == "" || $('#WidgetMenu').val() == null
@@ -229,7 +229,7 @@
             || $('#createDate').val() == "" || $('#createDate').val() == null
         
         ){
-           alert("信息不全");
+           alert("Thông tin chưa hoàn tất");
            return;
             
         }
@@ -245,26 +245,26 @@
             success: function (result) {
                 if ("id" in result){
                     $('#id').val(result.id);
-					$('#labelNew').text("编辑:"+result.id);
+					$('#labelNew').text("Biên tập:"+result.id);
                     alert(result.msg);
                 }
                 else 
                 {
-					alert("失败");
+					alert("Thất bại");
 				}
             }
         });
     }
-    //保存设置
+    //Lưu các thiết lập
     function saveConfig(){
         if(!isJSON($('#WidgetCategory').val()))
         {
-            alert("分类格式错误"); 
+            alert("Lỗi định dạng danh mục"); 
             return false;
         }
         if(!isJSON($('#WidgetMenu').val()))
         {
-            alert("菜单格式错误"); 
+            alert("Lỗi định dạng menu"); 
             return false;
         }
         $.ajax({
@@ -278,11 +278,11 @@
             }
         });
     }
-    //导入json
+    //Nhập json
     function importBlog(){
         if(!isJSON($('#importJson').val()))
         {
-            alert("导入格式错误"); 
+            alert("Lỗi định dạng nhập"); 
             return false;
         }
         $.ajax({
@@ -296,9 +296,9 @@
             }
         });
     }
-    //发布
+    //Xuất bản
     function publish(){
-        if (confirm("确定吗?发布将清理所有静态缓存,重新生成")==false){ 
+        if (confirm("Bạn có chắc chắn không? Việc xuất bản sẽ xóa tất cả bộ nhớ đệm tĩnh và tạo lại")==false){ 
             return false; 
           }
         $.ajax({
