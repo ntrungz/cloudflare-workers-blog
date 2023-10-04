@@ -64,7 +64,7 @@
 			<form id="addNewForm"  class="form-inline" >
 				<div class="form-group" style="width: 98%">
 					<input type="hidden" class="form-control" name="id" id="id" >
-					<input type="text" class="form-control" name="title" id="title" placeholder="标题" style="width: 100%;" required="true">
+					<input type="text" class="form-control" name="title" id="title" placeholder="Tiêu đề" style="width: 100%;" required="true">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail2">Hình ảnh nổi bật</label>
@@ -85,11 +85,11 @@
 				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail2">Nhãn</label>
-					<input type="text" class="form-control" name="tags" id="tags" placeholder="标签1,标签2">
+					<input type="text" class="form-control" name="tags" id="tags" placeholder="thẻ 1, thẻ 2">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail2">Sự ưu tiên</label>
-					<input type="text" class="form-control" name="priority" id="priority" value='0.5' placeholder="权重">
+					<input type="text" class="form-control" name="priority" id="priority" value='0.5' placeholder="Giá trị ưu tiên">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail2">Tần suất cập nhật</label>
@@ -116,21 +116,21 @@
 			<form id="configForm" role="form" >
 				<div class="form-group">
 				    <label for="name">Phân loại, ví dụ:<code>["Loại A","Loại B","Loại C","Loại D"]</code></label>
-					<textarea class="form-control" id="WidgetCategory" name="WidgetCategory" rows="3" placeholder='["分类A","分类B"]'></textarea>
+					<textarea class="form-control" id="WidgetCategory" name="WidgetCategory" rows="3" placeholder='["Loại A", "Loại B"]'></textarea>
 				</div>
 	
 				<div class="form-group">
-				    <label for="name">Menu, ví dụ:<code>[{"title":"Bài viết kỹ thuật","url":"/category/技术文章"},{"title":"Quản lý","url":"/admin"}]</code></label>
+				    <label for="name">Menu, ví dụ:<code>[{"title":"Bài viết kỹ thuật","url":"/category/baivietkithuat"},{"title":"Quản lý","url":"/admin"}]</code></label>
 					<textarea class="form-control" id="WidgetMenu" name="WidgetMenu" rows="5"  placeholder='[
 	{"title":"Loại A"	,"url":"/category/typeA"},
 	{"title":"Loại B"	,"url":"/category/typeB"}
 ]'></textarea>
 				</div>
 				<div class="form-group">
-				    <label for="name">Các liên kết khác, 例:<code>[{"title":"Bạn tốt của tôi","url":"https://blog.ntme/workers.com/"},{"title":"Google","url":"https://www.google.com/"}]</code></label>
+				    <label for="name">Các liên kết khác, ví dụ:<code>[{"title":"Bạn tốt của tôi","url":"https://blog.ntme/workers.com/"},{"title":"Google","url":"https://www.google.com/"}]</code></label>
 					<textarea class="form-control" id="WidgetLink" name="WidgetLink" rows="5"  placeholder='[
-	{"title":"好友"	,"url":"https://blog.gezhong.vip/"},
-	{"title":"谷歌"	,"url":"https://www.google.com/"}
+	{"title":"bạn"	,"url":"https://blog.ntme.workers.dev/"},
+	{"title":"Google"	,"url":"https://www.google.com/"}
 ]'></textarea>
 				</div>
 				<a  tabindex="0"  role="button"  type="submit" id="btn_saveConfig" class="btn btn-default" onclick="saveConfig()">保存</a>
@@ -143,8 +143,8 @@
 					<textarea class="form-control" id="importJson" name="importJson" rows="3" placeholder='Sao chép json xuất hoàn chỉnh'></textarea>
 				</div>
 
-				<a  tabindex="0"  role="button"  type="submit" id="btn_import" class="btn btn-default" onclick="importBlog()">导入</a>
-				<a  tabindex="0"  role="button"  type="submit" id="btn_export" class="btn btn-default"  href="/admin/export/" >导出</a>
+				<a  tabindex="0"  role="button"  type="submit" id="btn_import" class="btn btn-default" onclick="importBlog()">khôi phục</a>
+				<a  tabindex="0"  role="button"  type="submit" id="btn_export" class="btn btn-default"  href="/admin/export/" >sao lưu</a>
 			</form>
 
 			
