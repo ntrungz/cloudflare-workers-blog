@@ -1,43 +1,41 @@
-> 这是一个运行在cloudflare workers 上的博客程序,使用 cloudflare KV作为数据库,无其他依赖.
-兼容静态博客的速度,以及动态博客的灵活性,方便搭建不折腾.
-演示地址: [https://blog.gezhong.vip](https://blog.gezhong.vip "cf-blog演示站点")
+> Đây là một chương trình blog hoạt động trên Cloudflare Workers, sử dụng Cloudflare KV làm cơ sở dữ liệu và không phụ thuộc vào bất kỳ công cụ nào khác. Nó kết hợp tốc độ của blog tĩnh với sự linh hoạt của blog động, dễ dàng thiết lập mà không cần quá nhiều thao tác.
+>
+> Địa chỉ trình diễn: [https://blog.gezhong.vip](https://blog.gezhong.vip "cf-blog演示站点")
 
-### TG 讨论群: [@CloudflareBlog](https://t.me/cloudflareblog "")
-# 主要特点
-* 使用workers提供的KV作为数据库
-* 使用cloudflare缓存html来降低KV的读写
-* 所有html页面均为缓存,可达到静态博客的速度
-* 使用KV作为数据库,可达到wordpress的灵活性
-* 后台使用markdown语法,方便快捷
-* 一键发布(页面重构+缓存清理)
+### Nhóm thảo luận TG: [@CloudflareBlog](https://t.me/cloudflareblog "")
 
-# 承载能力
- * KV基本不存在瓶颈,因为使用了缓存,读写很少
- * 唯一瓶颈是 workers的日访问量10w,大约能承受2万IP /日
- * 文章数:1G存储空间,几万篇问题不大
+# Các tính năng chính
+* Sử dụng KV do Workers cung cấp làm cơ sở dữ liệu.
+* Sử dụng bộ nhớ đệm của Cloudflare để giảm thiểu việc đọc và ghi KV.
+* Tất cả các trang HTML đều được lưu vào bộ nhớ đệm, đạt được tốc độ của blog tĩnh.
+* Sử dụng KV làm cơ sở dữ liệu, đạt được sự linh hoạt tương đương với WordPress.
+* Hỗ trợ cú pháp Markdown trong phần quản trị, nhanh chóng và thuận tiện.
+* Phát hành chỉ bằng một cú nhấp chuột (tái cấu trúc trang + xóa bộ nhớ đệm).
 
-# 部署步骤
-  这里没有实时预览真难受,一系列坑会慢慢填到博客,敬请关注 [https://blog.gezhong.vip](https://blog.gezhong.vip "")
+# Khả năng chịu tải
+* KV gần như không có điểm nghẽn vì sử dụng bộ nhớ đệm, việc đọc và ghi rất ít.
+* Điểm nghẽn duy nhất là số lượng truy cập hàng ngày của Workers là 100.000, có thể chịu được khoảng 20.000 IP/ngày.
+* Số lượng bài viết: 1GB dung lượng lưu trữ, có thể chứa vài chục nghìn bài viết mà không gặp vấn đề gì.
 
-# 更新日志
+# Hướng dẫn triển khai
+  Đây không có chế độ xem trước thời gian thực thật là khó chịu, các vấn đề sẽ dần được cập nhật trên blog, xin vui lòng theo dõi tại [https://blog.gezhong.vip](https://blog.gezhong.vip "")
 
-> [持续更新地址https://blog.gezhong.vip/article/009000/update-log.html](https://blog.gezhong.vip/article/009000/update-log.html "更新日志")
-  
-## 最近更新(2020-12-31)
-* 2020-12-31:加入sitemap.xml
-* 2020-12-24:本次更新,主要针对seo和阅读次数,以及多项细节优化
+# Nhật ký cập nhật
 
+> [Địa chỉ cập nhật liên tục: https://blog.gezhong.vip/article/009000/update-log.html](https://blog.gezhong.vip/article/009000/update-log.html "Nhật ký cập nhật")
 
+## Cập nhật gần đây (2020-12-31)
+* 2020-12-31: Thêm sitemap.xml.
+* 2020-12-24: Cập nhật lần này chủ yếu tập trung vào SEO, số lượt đọc, và nhiều chi tiết tối ưu khác.
 
-
-### 前端演示:[https://blog.gezhong.vip](https://blog.gezhong.vip "演示站点")
+### Trình diễn giao diện trước: [https://blog.gezhong.vip](https://blog.gezhong.vip "Trình diễn trang web")
 ![](https://s3.ax1x.com/2020/12/22/rrP81S.png)
 
-### 后端演示:
+### Trình diễn giao diện sau:
 ![](https://s3.ax1x.com/2020/12/22/rrAWrD.png)
 
-## 捐赠
+## Đóng góp
 
-如果你觉的本项目帮到你了，还请资持一下作者
+Nếu bạn thấy dự án này hữu ích, xin hãy ủng hộ tác giả:
 
-* [捐赠](https://afdian.net/@zhaopp "爱发电")  
+* [Đóng góp](https://afdian.net/@zhaopp "Ủng hộ")
